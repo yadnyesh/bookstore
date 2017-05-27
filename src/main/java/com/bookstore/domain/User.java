@@ -100,10 +100,6 @@ public class User implements UserDetails, Serializable{
 		this.phone = phone;
 	}
 
-	public boolean isEnabled() {
-		return enabled;
-	}
-
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
@@ -139,6 +135,9 @@ public class User implements UserDetails, Serializable{
 		return true;
 	}
 	
-	
+	@Override
+	public boolean isEnabled() {
+		return enabled;
+	}
 	
 }
