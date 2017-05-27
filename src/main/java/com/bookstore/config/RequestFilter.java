@@ -7,5 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class RequestFilter {
+	
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) {
 
 }
