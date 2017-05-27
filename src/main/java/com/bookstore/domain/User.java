@@ -34,6 +34,6 @@ public class User implements Serializable{
 	private String phone;
 	private boolean enabled = true;
 	
-	@OneToMany(mapped = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<UserRole> userRoles = new HashSet<>();
 }
