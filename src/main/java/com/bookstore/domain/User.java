@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.bookstore.domain.security.UserRole;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class User implements Serializable{
@@ -35,5 +36,6 @@ public class User implements Serializable{
 	private boolean enabled = true;
 	
 	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	@JsonIgnore
 	private Set<UserRole> userRoles = new HashSet<>();
 }
