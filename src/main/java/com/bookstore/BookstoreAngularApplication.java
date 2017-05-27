@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.bookstore.config.SecurityUtility;
 import com.bookstore.domain.User;
 
 @SpringBootApplication
@@ -19,6 +20,7 @@ public class BookstoreAngularApplication implements CommandLineRunner{
 		user1.setFirstName("Yadnyesh");
 		user1.setLastName("BharatJuvekar");
 		user1.setUsername("yb");
+		user1.setPassword(SecurityUtility.passwordEncoder().encode("p"));
 		
 
 		
