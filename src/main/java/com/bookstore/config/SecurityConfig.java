@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.session.web.http.HeaderHttpSessionStrategy;
+import org.springframework.session.web.http.HttpSessionStrategy;
 
 import com.bookstore.service.UserSecurityService;
 
@@ -42,5 +44,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userSecurityService).passwordEncoder(passwordEncoder());
+	}
+	
+	public HttpSessionStrategy httpSessionStrategy(){
+		return new HeaderHttpSessionStrategy();
 	}
 }
