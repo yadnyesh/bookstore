@@ -44,5 +44,6 @@ public class RequestFilter {
 	
 	public void init(FilterConfig filterConfig) {}
 	
+	public void destroy() {}
 
 }
