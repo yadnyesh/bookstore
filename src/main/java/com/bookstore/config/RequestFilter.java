@@ -1,6 +1,7 @@
 package com.bookstore.config;
 
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -36,8 +37,12 @@ public class RequestFilter {
 			response.setHeader("Access-Control-Max-Age", "3600");
 			response.setHeader("Access-Control-Allow-Headers", "authorization, content-type, x-auth-token, " + 
 								"access-control-request-headers, access-control-request-method, accept, origin, authorization,x-requested-with");
+			response.setStatus(HttpServletResponse.SC_OK);
 		}
 		
 	}
+	
+	public void init(FilterConfig filterConfig) {}
+	
 
 }
