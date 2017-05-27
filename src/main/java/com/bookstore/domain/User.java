@@ -7,6 +7,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,6 +34,6 @@ public class User implements Serializable{
 	private String phone;
 	private boolean enabled = true;
 	
-	@OneToMany(mapped = "user", cascade=CascadeType.ALL)
+	@OneToMany(mapped = "user", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<UserRole> userRoles = new HashSet<>();
 }
