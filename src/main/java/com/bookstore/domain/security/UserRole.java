@@ -24,9 +24,9 @@ public class UserRole implements Serializable{
 	
 	public UserRole(){}
 
-	public UserRole(Long userRoleId) {
-		super();
-		this.userRoleId = userRoleId;
+	public UserRole(User user, Role role) {
+		this.user = user;
+		this.role = role;
 	}
 	
 	
