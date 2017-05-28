@@ -19,7 +19,8 @@ public class LoginResource {
 	
 	@RequestMapping("/token")
 	public Map<String, String> token(HttpSession session, HttpServletRequest request) {
-		return null;
+		System.out.println(request.getRemoteHost());
+		String remoteHost = request.getRemoteHost();
 	}
 	
 }
