@@ -3,12 +3,12 @@ package com.bookstore.resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bookstore.domain.User;
+import com.bookstore.service.UserService;
 
 @RestController
 public class LoginResource {
 
 	@Autowired
-	private User user;
+	private UserService userService;
 	
 }
