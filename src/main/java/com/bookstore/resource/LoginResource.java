@@ -7,7 +7,7 @@ import com.bookstore.domain.User;
 @RestController
 public class LoginResource {
 
-	
+	@Autowired
 	private User user;
 	
 }
