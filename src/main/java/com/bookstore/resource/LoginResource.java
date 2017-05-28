@@ -21,6 +21,10 @@ public class LoginResource {
 	public Map<String, String> token(HttpSession session, HttpServletRequest request) {
 		System.out.println(request.getRemoteHost());
 		String remoteHost = request.getRemoteHost();
+		int portNumber = request.getRemotePort();
+		
+		System.out.println(remoteHost + ":" + portNumber);
+		System.out.println(request.getRemoteAddr());
 	}
 	
 }
