@@ -32,6 +32,7 @@ public class LoginResource {
 		return Collections.singletonMap("token", session.getId());
 	}
 	
+	@RequestMapping("/checkSession")
 	public ResponseEntity checkSession() {
 		return new ResponseEntity("Session Active!", HttpStatus.OK);
 	}
