@@ -11,4 +11,6 @@ public class LoginResource {
 	@Autowired
 	private UserService userService;
 	
+	public Map<String, String> token(HttpSession session, )
+	
 }
