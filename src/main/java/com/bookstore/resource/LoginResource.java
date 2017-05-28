@@ -1,5 +1,6 @@
 package com.bookstore.resource;
 
+import java.util.Collections;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +26,8 @@ public class LoginResource {
 		
 		System.out.println(remoteHost + ":" + portNumber);
 		System.out.println(request.getRemoteAddr());
+		
+		return Collections.singletonMap("token", session.getId());
 	}
 	
 }
