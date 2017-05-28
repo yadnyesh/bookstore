@@ -30,4 +30,8 @@ public class LoginResource {
 		return Collections.singletonMap("token", session.getId());
 	}
 	
+	public ResponseEntity checkSession() {
+		
+	}
+	
 }
