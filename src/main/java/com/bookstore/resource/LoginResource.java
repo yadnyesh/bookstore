@@ -37,4 +37,9 @@ public class LoginResource {
 		return new ResponseEntity("Session Active!", HttpStatus.OK);
 	}
 	
+	
+	public ResponseEntity logout(){
+		
+	}
+	
 }
